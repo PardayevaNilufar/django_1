@@ -8,5 +8,7 @@
         <h1>{{ articl.title }} Sana:{{ articl.created_at }}</h1>
         <p>{{ articl.description }}</p>
         <a href="{% url 'home' %}">Bosh sahifa </a>
+        <a href="{% url 'ochirish' articl.id %}">O'chirish </a>
+        <a href="{% url 'yangilash' articl.id %}">Tahrirlash </a>
 </body>
 </html>

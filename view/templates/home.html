@@ -5,12 +5,24 @@
     <title>Bosh sahifa</title>
 </head>
 <body>
+    <p><a href="{% url 'qoshish' %}"> Maqola qo'shish</a></p>
+    <p><a href="{% url 'categoriya' %}"> Categoriya qo'shish</a></p>
     <h3>Barcha maqolalar</h3>
 
     {% for article in articles %}
     <p><a href="{% url 'detail' article.id %}">{{ article.title }}</a></p>
+
     {% endfor %}
 
+
+
+   <h1>
+       {% for article in categoriya %}
+
+    <p><a href="{% url 'detaile' article.id %}">{{ article.name }}</a></p>
+
+        {% endfor %}
+    </h1>
 
 
 </body>
